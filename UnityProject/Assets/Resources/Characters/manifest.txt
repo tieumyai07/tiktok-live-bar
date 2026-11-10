@@ -1,0 +1,19 @@
+# Danh sách nhân vật trên sàn nhảy. Mỗi dòng: <thư mục> <tần suất> <hệ số cao> <fps>
+# Tần suất 2 = xuất hiện gấp đôi nhân vật tần suất 1. Hệ số cao 1.2 = cao hơn 20%.
+# File này do scripts/import-dancer-clips.js tạo, có thể sửa tay rồi build lại game.
+a 1 1 12
+anh_sau_mui_01 3 1.45 24
+b 1 1 12
+c 1 1 12
+co_gai_vu_truong_01 3 1.45 24
+co_gai_vu_truong_02 3 1.45 24
+d 1 1 12
+e 1 1 12
+g 1 1 12
+h 1 1 12
+hanhan_video_dance 1 1 15
+j 1 1 12
+k 1 1 12
+mushroom_dance_01 1 1 12
+mushroom_dance_15 1 1 12
+mushroom_magic_02 1 1 12

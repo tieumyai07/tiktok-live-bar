@@ -1,0 +1,28 @@
+{
+  "name": "tiktoklivegame",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TikTok Live Bar — TikTok Live Game 3D Bridge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check src/config/environment.js && node --check src/security.js && node --check src/tiktok/normalize-event.js && node --check src/tiktok/normalize-tikfinity-event.js && node --check public/control.js && node --check scripts/download-mushroom-gifs.js && node --check scripts/import-dancer-clips.js",
+    "download:gifs": "node scripts/download-mushroom-gifs.js",
+    "security:smoke": "node scripts/security-smoke.js",
+    "test": "npm run check && node --test",
+    "import:dancers": "node scripts/import-dancer-clips.js"
+  },
+  "keywords": [],
+  "author": "TikTok Live Bar (dựa trên mã nguồn MIT của ÔNG CHÚ MMO <https://ongchummo.com>)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "three": "^0.180.0",
+    "tiktok-live-connector": "^2.4.3",
+    "ws": "^8.21.1"
+  }
+}

@@ -1,0 +1,27 @@
+THA CLIP DANCER VAO THU MUC NAY
+
+Dinh dang: GIF, MP4, MOV, WEBM, MKV, AVI.
+Ten file se thanh ten nhan vat (vi du co_gai_chan_dai.mp4 -> co_gai_chan_dai).
+
+Nen clip:
+- Tot nhat la GIF/WEBM co nen trong suot: giu nguyen alpha.
+- Nen xanh la: dat ten file co chu "green" (vi du anh_sau_mui_green.mp4), script tu key nen.
+- Nen xanh duong: dat ten file co chu "blue".
+- Nen khac: dung tuy chon --chroma 0xRRGGBB khi chay script.
+- Clip quay nen thuong (phong, tuong, san khau): dung --matte ai, script tach nen bang AI
+  va tu cat khung sat nguoi. Can cai mot lan: python -m pip install rembg onnxruntime pillow
+
+Chay (trong thu muc TikTokBridge):
+  npm run import:dancers
+hoac
+  node scripts/import-dancer-clips.js --fps 12 --max-frames 96
+hoac voi clip dancer nguoi that (nen thuong, 24 fps cho muot, cao hon 45%, xuat hien gap 3 lan):
+  node scripts/import-dancer-clips.js --matte ai --fps 24 --max-frames 192 --height-scale 1.45 --weight 3
+
+Vong lap: mac dinh --loop auto tu tim doan lap muot nhat (toi thieu --min-loop-seconds 3.5)
+va pha tron --crossfade 6 khung o cho noi de khong bi giat khi quay vong.
+Clip co doan hong (loe sang, cat canh): dung --start <giay> va --seconds <giay> de chon doan tot.
+
+Sau do build lai game bang build.bat. Nhan vat moi xuat hien xen lan nhan vat meme.
+Muon dancer xuat hien nhieu hon hoac cao hon: sua cot tan suat / he so cao trong
+UnityProject/Assets/Resources/Characters/manifest.txt roi build lai.
